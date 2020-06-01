@@ -63,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterFunctions.cs" />
+    <Compile Include="Assets\Scripts\FillRef.cs" />
     <Compile Include="Assets\Scripts\FirstPersonView.cs" />
+    <Compile Include="Assets\Scripts\GameTaskMananger.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\objectText.cs" />
@@ -71,9 +73,9 @@
     <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\prefabs.cs" />
+    <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\start.cs" />
     <Compile Include="Assets\Scripts\WorkerController.cs" />
-    <Compile Include="Assets\TaskMananger.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Code_dawg/XV/XV/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

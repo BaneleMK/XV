@@ -7,27 +7,31 @@ public class prefabs : MonoBehaviour
 {
     public GameObject prefab1;
     public GameObject prefab2;
+    public GameObject prefab3_worker;
     private GameObject go;
-    // Start is called before the first frame update
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnBox()
     {
-        if (Input.GetKeyDown("v"))
-        {
-            go = Instantiate(prefab1, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            go.AddComponent<BoxCollider>();
-            go.AddComponent<NavMeshObstacle>();
-            go.GetComponent<NavMeshObstacle>().carving = true;
-            go.AddComponent<Interactable>();
-        }
-        if (Input.GetKeyDown("n"))
-        {
-            go = Instantiate(prefab2, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            go.AddComponent<BoxCollider>();
-            go.AddComponent<NavMeshObstacle>();
-            go.GetComponent<NavMeshObstacle>().carving = true;
-            go.AddComponent<Interactable>();
-        }
+        go = Instantiate(prefab1, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        go.AddComponent<BoxCollider>();
+        go.AddComponent<NavMeshObstacle>();
+        go.GetComponent<NavMeshObstacle>().carving = true;
+        go.AddComponent<Interactable>();
     }
+
+    public void SpawnTable()
+    {
+        go = Instantiate(prefab2, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        go.AddComponent<BoxCollider>();
+        go.AddComponent<NavMeshObstacle>();
+        go.GetComponent<NavMeshObstacle>().carving = true;
+        go.AddComponent<Interactable>();
+    }
+
+    public void SpawnWorker()
+    {
+        go = Instantiate(prefab3_worker, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+    }
+
+
 }

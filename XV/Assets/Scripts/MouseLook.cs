@@ -37,6 +37,13 @@ public class MouseLook : MonoBehaviour
             }
         }
 
+        if (escapekey == true && Input.GetMouseButtonDown(1))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            escapekey = false;
+            Debug.Log("Lock");
+        }
+
         if (cam.enabled && !transform.GetComponentInParent<PlayerLookController>().focusmode && !escapekey)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;

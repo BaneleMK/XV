@@ -144,7 +144,10 @@ public class PlayerLookController : CharacterFunctions
 
     }
 
-    
+    public Interactable getFocus()
+    {
+        return focus;
+    }
 
     void SetFocus(Interactable newFocus)
     {
@@ -157,7 +160,10 @@ public class PlayerLookController : CharacterFunctions
 
     void RemoveFocus()
     {
-        focus.OnDefocused();
+        if (focus)
+        {
+            focus.OnDefocused();
+        }
         focusmode = false;
         focusUI.SetActive(false);
         focus = null;
